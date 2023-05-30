@@ -3,6 +3,12 @@ Data wrangling with Python
 
 <h2>College Football Dataset Creation</h2>
   
+  <h2>Languages Used</h2>
+
+- <b>SQL</b> 
+- <b>Python</b>
+
+
   <p> In this project, I identified, cleaned, and wrangled data from three different sources into a single dataset of College Football statistics by team and year. </p>
   
   Three data sources:
