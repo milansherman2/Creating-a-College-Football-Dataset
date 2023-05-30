@@ -3,7 +3,7 @@ Data wrangling with Python
 
 <h2>College Football Dataset Creation</h2>
   
-  <p> In this project, I identified, cleaned, and wrangled data from three different sources into a single dataset of College Football statistics by team </p>
+  <p> In this project, I identified, cleaned, and wrangled data from three different sources into a single dataset of College Football statistics by team and year. </p>
   
   Three data sources:
 1.	College Football Offensive season statistics by team by season (flat file source)
@@ -51,7 +51,7 @@ This URL has College Football Defensive Statistics by team for a season. There a
 - Yards/G: average number of yards allowed per game
   
 <b>API data source:</b>
-<p>https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/rankings/getRankings.  This API has college football rankings by year and division (FBS, FCS, Division 2, and Division 3).  The defensive and offensive statistics data is only for FBS division schools, so I filtered to FBS schools when importing the data.  Also, the API queries the data by year, regular season or postseason, and week.  For example, there are generally about 16 weeks in the regular season, so the rankings on any given week are available.  However, I was only interested in the final rankings since the offensive and defensive statistics data are season level statistics, so I iterated on year to get all the years that I needed and added a field for year.  This data has five fields, and each year has 25 observations as the rankings generally only include the top 25 teams in the nation.  Finally, I left joined this data to the above merged data, as only 25 out of 130 teams will have a ranking for a given year.
+<p>https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/rankings/getRankings.  This API has college football rankings by year and division (FBS, FCS, Division 2, and Division 3).  The defensive and offensive statistics data is only for FBS division schools, so I filtered to FBS schools when importing the data.  Also, the API queries the data by year, regular season or postseason, and week.  For example, there are generally about 16 weeks in the regular season, so the rankings on any given week are available.  However, I was only interested in the final rankings since the offensive and defensive statistics data are season level statistics, so I iterated on year to get all the years that I needed and added a field for year.  This data has five fields, and each year has 25 observations as the rankings generally only include the top 25 teams in the nation.  Finally, I left joined this data to the above merged data, as only 25 out of 130 teams will have a ranking for a given year (thus, ranking will be null for most teams in a given year).
 
   <b>Data dictionary:</b>
 - Rank: the final ranking for the season
@@ -59,4 +59,13 @@ This URL has College Football Defensive Statistics by team for a season. There a
 - Conference: what conference the school/team is in
 - FirstPlaceVotes: the number of first place votes that the team received in the poll that they’re in
 - Points: total number of points from all votes (not just first place votes)
+  
+Creating a SQLite Database: finally, I loaded the merged and cleaned dataset into a local SQLite database that can be queried. This dataset would be ideal for an analysis of college football teams to determine which statistics are most predictive of winning or losing, or for creating a predictive model based on these features.  For example, a few questions that could be asked are:
+  - Is offensive or defensive ranking more predictive of final overall ranking?
+  - Which statistics are most predictive of a team's defensive ranking?
+  - Which statistics are most predictive of a team's offensive ranking?
+  - Are the same stats/metrics predictive of a team performing poorly as of a team performing well?
+  
+  <b>Additional work:</b> 
+Another feature that would be useful to include that is not part of this dataset is number of wins.  As a coach/team cannot control their ranking, the most immediate target is games won.  This would also allow for a deeper analysis of what goes into a team's ranking.  For example, analysis of teams with the same number of wins could reveal what is valued by voters, i.e., for teams with the same number of wins, which statistics are most correlated to a team's ranking?
 
