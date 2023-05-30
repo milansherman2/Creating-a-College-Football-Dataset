@@ -60,7 +60,8 @@ This URL has College Football Defensive Statistics by team for a season. There a
 - FirstPlaceVotes: the number of first place votes that the team received in the poll that they’re in
 - Points: total number of points from all votes (not just first place votes)
   
-Creating a SQLite Database: finally, I loaded the merged and cleaned dataset into a local SQLite database that can be queried. This dataset would be ideal for an analysis of college football teams to determine which statistics are most predictive of winning or losing, or for creating a predictive model based on these features.  For example, a few questions that could be asked are:
+  <b>Creating a SQLite Database:</b>
+Finally, I loaded the merged and cleaned dataset into a local SQLite database that can be queried. This dataset would be ideal for an analysis of college football teams to determine which statistics are most predictive of winning or losing, or for creating a predictive model based on these features.  For example, a few questions that could be asked are:
   - Is offensive or defensive ranking more predictive of final overall ranking?
   - Which statistics are most predictive of a team's defensive ranking?
   - Which statistics are most predictive of a team's offensive ranking?
