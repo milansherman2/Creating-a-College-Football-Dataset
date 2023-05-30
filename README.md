@@ -5,13 +5,13 @@ Data wrangling with Python
   
   <p> In this project, I identified, cleaned, and wrangled data from three different sources into a single dataset of College Football statistics by team </p>
   
-  The three sources that I identified are listed below:
+  Three data sources:
 1.	College Football Offensive season statistics by team by season (flat file source)
 2.	College Football Defensive season statistics by team by season
 3.	College Football Final rankings by season
 This dataset could be used to determine which offensive or defensive statistics are most predictive of winning the national championship or ending the season ranked in the Top 25.
 
-  <b>Flat file source:</b>
+<b>Flat file source:</b>
 <p> https://www.kaggle.com/datasets/braydenrogowski/college-football-offensive-stats-20102020.  
 This dataset has 10 years of College Football Offensive Statistics.  It has 1373 observations and 19 features, including team and year, which are the features that are common between the three datasets, although year was generated for the other data sources.</p>
 
@@ -50,8 +50,8 @@ This URL has College Football Defensive Statistics by team for a season. There a
 - Yards/Play: average number of yards allowed per play
 - Yards/G: average number of yards allowed per game
   
-  <b>API data source:</b>
-<p>https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/rankings/getRankings.  This API has college football rankings by year and division (FBS, FCS, Division 2, and Division 3).  The defensive and offensive statistics data is only for FBS division schools, so filtered to FBS schools when importing the data.  Also, the API queries the data by year, regular season or postseason, and week.  For example, there are generally about 16 weeks in the regular season, so the rankings on any given week are available.  However, I was only interested in the final rankings since the offensive and defensive statistics data are season level statistics.  Iiterated on year to get all the years that I needed and added a field for year.  This data has five fields, and each year will has 25 observations as the rankings generally only include the top 25 teams in the nation.  I left joined this data to the above merged data, as only 25 out of 130 teams will have a ranking for a given year.
+<b>API data source:</b>
+<p>https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/rankings/getRankings.  This API has college football rankings by year and division (FBS, FCS, Division 2, and Division 3).  The defensive and offensive statistics data is only for FBS division schools, so I filtered to FBS schools when importing the data.  Also, the API queries the data by year, regular season or postseason, and week.  For example, there are generally about 16 weeks in the regular season, so the rankings on any given week are available.  However, I was only interested in the final rankings since the offensive and defensive statistics data are season level statistics, so I iterated on year to get all the years that I needed and added a field for year.  This data has five fields, and each year has 25 observations as the rankings generally only include the top 25 teams in the nation.  Finally, I left joined this data to the above merged data, as only 25 out of 130 teams will have a ranking for a given year.
 
   <b>Data dictionary:</b>
 - Rank: the final ranking for the season
