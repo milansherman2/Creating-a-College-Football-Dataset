@@ -1,7 +1,7 @@
 # Creating-a-College-Football-Dataset
 Data wrangling with Python
 
-<h2>College Football Dataset Creation<h2>
+<h2>College Football Dataset Creation</h2>
   
   <p> In this project, I identified, cleaned, and wrangled data from three different sources into a single dataset of College Football statistics by team </p>
   
