@@ -67,11 +67,12 @@ The dataset created by combining the above datasets could be used to determine w
   
 <h3>Creating a SQLite Database:</h3>
 I loaded the merged and cleaned dataset into a local SQLite database that can be queried. This dataset would be ideal for an analysis of college football teams to determine which statistics are most predictive of winning or losing, or for creating a predictive model based on these features.  For example, a few questions that could be asked are:
+
   - Is offensive or defensive ranking more predictive of final overall ranking?
   - Which statistics are most predictive of a team's defensive ranking?
   - Which statistics are most predictive of a team's offensive ranking?
   - Are the same stats/metrics predictive of a team performing poorly as of a team performing well?
   
-  <b>Additional work:</b> 
+<b>Additional work:</b> 
 Another feature that would be useful to include that is not part of this dataset is number of wins.  As a coach/team cannot control their ranking, the most immediate target is games won.  This would also allow for a deeper analysis of what goes into a team's ranking.  For example, analysis of teams with the same number of wins could reveal what is valued by voters, i.e., for teams with the same number of wins, which statistics are most correlated to a team's ranking?
 
